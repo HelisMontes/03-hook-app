@@ -11,6 +11,18 @@ export const useForm = ( elementsForm = {}, array = [] ) => {
             [target.name]:target.value
         });
          const valueInput = array.find( input => input.name === target.name );
+         /**
+          * Otra forma de validar si el array retorna un objeto
+          * _____________________________________________________
+          * Si el array no retorna un obejto valueInput = undefined,
+          * por ende nos da un error.
+          * Para cambiar el valor de un undefined se usa !
+          * Si valueInput = undefined. 
+          * !valueInput = true.
+          * !!valueInput = false.
+          * @destructuring { require, name } = !!valueInput && valueInput
+          * @description !!valueInput ? creo las variables : no creo las variables
+          */
          if ( !valueInput ) return;
          const { require, name } = valueInput
          if ( require && target.value.length < 1 ) console.log(`Campo ${name} esta vacio`);
