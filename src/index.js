@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Layout } from './components/05-useLayoutEffect/Layout';
+import { Padre } from './components/07-tarea-memo/Padre';
 
+// import { Layout } from './components/05-useLayoutEffect/Layout';
 // import { RealExampleRef } from './components/04-useRef/RealExampleRef';
 // import { FocusScreen } from './components/04-useRef/FocusScreen';
 // import { MultiplesCustomHook } from './components/03-examples/MultiplesCustomHook';
@@ -13,7 +14,7 @@ import { Layout } from './components/05-useLayoutEffect/Layout';
 
 
 ReactDOM.render(
-  <Layout />,
+  <Padre />,
   document.getElementById('root')
 );
 
