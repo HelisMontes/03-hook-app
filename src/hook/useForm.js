@@ -27,7 +27,10 @@ export const useForm = ( elementsForm = {}, array = [] ) => {
          const { require, name } = valueInput
          if ( require && target.value.length < 1 ) console.log(`Campo ${name} esta vacio`);
     }
-    return ( [ elementForm, handleImputChange ] );
+    const resetForm = () =>{
+        setElementForm(elementsForm)
+    }
+    return ( [ elementForm, handleImputChange, resetForm ] );
 }
 
 useForm.propTypes = {
